@@ -5,127 +5,106 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_customer |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 8 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | customer_key |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | customer_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | customer_id | character varying | NO | 0 | N/A* | 0 | 0 |
-| 3 | customer_name | character varying | YES | 0 | N/A* | 0 | 0 |
-| 4 | segment | character varying | YES | 0 | N/A* | 0 | 0 |
-| 5 | industry | character varying | YES | 0 | N/A* | 0 | 0 |
-| 6 | account_tier | character varying | YES | 0 | N/A* | 0 | 0 |
-| 7 | hq_country | character varying | YES | 0 | N/A* | 0 | 0 |
-| 8 | hq_region | character varying | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| customer_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| customer_id | character varying | max length 20 | NO | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| customer_name | character varying | max length 80 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| segment | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| industry | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| account_tier | character varying | max length 20 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| hq_country | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| hq_region | character varying | max length 20 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| customer_key | No values available; table is empty |
+| customer_id | No values available; table is empty |
+| customer_name | No values available; table is empty |
+| segment | No values available; table is empty |
+| industry | No values available; table is empty |
+| account_tier | No values available; table is empty |
+| hq_country | No values available; table is empty |
+| hq_region | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| customer_key | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 1 | customer_key |
-| character varying | 7 | customer_id, customer_name, segment, industry, account_tier, hq_country, hq_region |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| customer_id | min_len=null, max_len=null, avg_len=null |
+| customer_name | min_len=null, max_len=null, avg_len=null |
+| segment | min_len=null, max_len=null, avg_len=null |
+| industry | min_len=null, max_len=null, avg_len=null |
+| account_tier | min_len=null, max_len=null, avg_len=null |
+| hq_country | min_len=null, max_len=null, avg_len=null |
+| hq_region | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| customer_key | 0 | No values present |
-| customer_id | 0 | No values present |
-| customer_name | 0 | No values present |
-| segment | 0 | No values present |
-| industry | 0 | No values present |
-| account_tier | 0 | No values present |
-| hq_country | 0 | No values present |
-| hq_region | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 8 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| customer_key | 0 | No rows present; duplicate assessment not meaningful |
-| customer_id | 0 | No rows present |
-| customer_name | 0 | No rows present |
-| segment | 0 | No rows present |
-| industry | 0 | No rows present |
-| account_tier | 0 | No rows present |
-| hq_country | 0 | No rows present |
-| hq_region | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| customer_key | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No date columns exist in this table.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| customer_id | N/A | N/A | N/A | No rows available |
-| customer_name | N/A | N/A | N/A | No rows available |
-| segment | N/A | N/A | N/A | No rows available |
-| industry | N/A | N/A | N/A | No rows available |
-| account_tier | N/A | N/A | N/A | No rows available |
-| hq_country | N/A | N/A | N/A | No rows available |
-| hq_region | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| customer_id | No rows available |
-| segment | No rows available |
-| industry | No rows available |
-| account_tier | No rows available |
-| hq_country | No rows available |
-| hq_region | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | customer_key and customer_id are structurally mandatory, but no loaded data exists |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | customer_name, segment, industry, account_tier, hq_country, hq_region |
+| Structurally Required Columns | customer_key, customer_id |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | customer_key is defined as primary key in metadata |
-| Required business identifier defined | PASS | customer_id is NOT NULL in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
-| Domain/value assessment | WARNING | No values available for profiling |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | customer_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Column Metadata Availability | PASS | All 8 columns profiled |
+| Distribution Analysis | WARNING | No distributions available because table is empty |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_customer` exists and was successfully profiled at the schema level. It currently contains no records, so all statistical and quality results are constrained by the absence of data. The table structure is appropriate for customer master attributes in the Cisco bookings star schema, but operational population is not yet present.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_customer` table has a valid dimensional structure with 8 columns and primary key `customer_key`, but it currently contains no records. Profiling confirms schema integrity and no duplicate primary keys, while all data-driven statistics remain unavailable until the table is populated.
