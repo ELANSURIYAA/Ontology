@@ -5,122 +5,103 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_product |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 7 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | product_key |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | product_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | product_id | character varying | NO | 0 | N/A* | 0 | 0 |
-| 3 | product_name | character varying | YES | 0 | N/A* | 0 | 0 |
-| 4 | product_family | character varying | YES | 0 | N/A* | 0 | 0 |
-| 5 | technology_domain | character varying | YES | 0 | N/A* | 0 | 0 |
-| 6 | offer_type | character varying | YES | 0 | N/A* | 0 | 0 |
-| 7 | business_entity | character varying | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| product_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| product_id | character varying | max length 30 | NO | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| product_name | character varying | max length 80 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| product_family | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| technology_domain | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| offer_type | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| business_entity | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| product_key | No values available; table is empty |
+| product_id | No values available; table is empty |
+| product_name | No values available; table is empty |
+| product_family | No values available; table is empty |
+| technology_domain | No values available; table is empty |
+| offer_type | No values available; table is empty |
+| business_entity | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| product_key | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 1 | product_key |
-| character varying | 6 | product_id, product_name, product_family, technology_domain, offer_type, business_entity |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| product_id | min_len=null, max_len=null, avg_len=null |
+| product_name | min_len=null, max_len=null, avg_len=null |
+| product_family | min_len=null, max_len=null, avg_len=null |
+| technology_domain | min_len=null, max_len=null, avg_len=null |
+| offer_type | min_len=null, max_len=null, avg_len=null |
+| business_entity | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| product_key | 0 | No values present |
-| product_id | 0 | No values present |
-| product_name | 0 | No values present |
-| product_family | 0 | No values present |
-| technology_domain | 0 | No values present |
-| offer_type | 0 | No values present |
-| business_entity | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 7 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| product_key | 0 | No rows present; duplicate assessment not meaningful |
-| product_id | 0 | No rows present |
-| product_name | 0 | No rows present |
-| product_family | 0 | No rows present |
-| technology_domain | 0 | No rows present |
-| offer_type | 0 | No rows present |
-| business_entity | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| product_key | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No date columns exist in this table.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| product_id | N/A | N/A | N/A | No rows available |
-| product_name | N/A | N/A | N/A | No rows available |
-| product_family | N/A | N/A | N/A | No rows available |
-| technology_domain | N/A | N/A | N/A | No rows available |
-| offer_type | N/A | N/A | N/A | No rows available |
-| business_entity | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| product_id | No rows available |
-| product_family | No rows available |
-| technology_domain | No rows available |
-| offer_type | No rows available |
-| business_entity | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | product_key and product_id are structurally mandatory, but no loaded data exists |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | product_name, product_family, technology_domain, offer_type, business_entity |
+| Structurally Required Columns | product_key, product_id |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | product_key is defined as primary key in metadata |
-| Required business identifier defined | PASS | product_id is NOT NULL in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Product domain assessment | WARNING | No values available for family/domain/offer analysis |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | product_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Column Metadata Availability | PASS | All 7 columns profiled |
+| Distribution Analysis | WARNING | No distributions available because table is empty |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_product` was structurally profiled successfully. Since the current row count is zero, all distribution, completeness, duplication, and text statistics are non-observable. The table design supports Cisco product analytics but is not populated with records.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_product` table is structurally consistent with product dimension modeling standards and includes a valid primary key. However, because it contains no rows, profiling is limited to metadata and structural quality checks.
