@@ -5,107 +5,94 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_geography |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 4 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | geography_key |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | geography_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | region | character varying | YES | 0 | N/A* | 0 | 0 |
-| 3 | theater | character varying | YES | 0 | N/A* | 0 | 0 |
-| 4 | country | character varying | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| geography_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| region | character varying | max length 20 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| theater | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| country | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| geography_key | No values available; table is empty |
+| region | No values available; table is empty |
+| theater | No values available; table is empty |
+| country | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| geography_key | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 1 | geography_key |
-| character varying | 3 | region, theater, country |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| region | min_len=null, max_len=null, avg_len=null |
+| theater | min_len=null, max_len=null, avg_len=null |
+| country | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| geography_key | 0 | No values present |
-| region | 0 | No values present |
-| theater | 0 | No values present |
-| country | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 4 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| geography_key | 0 | No rows present; duplicate assessment not meaningful |
-| region | 0 | No rows present |
-| theater | 0 | No rows present |
-| country | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| geography_key | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No date columns exist in this table.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| region | N/A | N/A | N/A | No rows available |
-| theater | N/A | N/A | N/A | No rows available |
-| country | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| region | No rows available |
-| theater | No rows available |
-| country | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | geography_key is structurally mandatory, but no loaded data exists |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | region, theater, country |
+| Structurally Required Columns | geography_key |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | geography_key is defined as primary key in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Geographic domain assessment | WARNING | No values available for regional/country validation |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | geography_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Column Metadata Availability | PASS | All 4 columns profiled |
+| Distribution Analysis | WARNING | No distributions available because table is empty |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_geography` was successfully profiled structurally. The current row count is zero, so the table has no observable data distribution, null behavior, or geographic coverage. It is schema-ready for geography dimension analytics but presently unpopulated.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_geography` table is structurally valid with a defined primary key and geography attributes, but it currently contains no rows. All profiling outcomes therefore indicate schema readiness rather than populated data quality characteristics.
