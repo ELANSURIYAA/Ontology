@@ -5,117 +5,100 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_sales_rep |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 6 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | sales_rep_key |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | sales_rep_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | rep_id | character varying | NO | 0 | N/A* | 0 | 0 |
-| 3 | rep_name | character varying | YES | 0 | N/A* | 0 | 0 |
-| 4 | sales_role | character varying | YES | 0 | N/A* | 0 | 0 |
-| 5 | sales_team | character varying | YES | 0 | N/A* | 0 | 0 |
-| 6 | segment_covered | character varying | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sales_rep_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| rep_id | character varying | max length 20 | NO | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| rep_name | character varying | max length 60 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| sales_role | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| sales_team | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| segment_covered | character varying | max length 30 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| sales_rep_key | No values available; table is empty |
+| rep_id | No values available; table is empty |
+| rep_name | No values available; table is empty |
+| sales_role | No values available; table is empty |
+| sales_team | No values available; table is empty |
+| segment_covered | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| sales_rep_key | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 1 | sales_rep_key |
-| character varying | 5 | rep_id, rep_name, sales_role, sales_team, segment_covered |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| rep_id | min_len=null, max_len=null, avg_len=null |
+| rep_name | min_len=null, max_len=null, avg_len=null |
+| sales_role | min_len=null, max_len=null, avg_len=null |
+| sales_team | min_len=null, max_len=null, avg_len=null |
+| segment_covered | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| sales_rep_key | 0 | No values present |
-| rep_id | 0 | No values present |
-| rep_name | 0 | No values present |
-| sales_role | 0 | No values present |
-| sales_team | 0 | No values present |
-| segment_covered | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 6 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| sales_rep_key | 0 | No rows present; duplicate assessment not meaningful |
-| rep_id | 0 | No rows present |
-| rep_name | 0 | No rows present |
-| sales_role | 0 | No rows present |
-| sales_team | 0 | No rows present |
-| segment_covered | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| sales_rep_key | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No date columns exist in this table.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| rep_id | N/A | N/A | N/A | No rows available |
-| rep_name | N/A | N/A | N/A | No rows available |
-| sales_role | N/A | N/A | N/A | No rows available |
-| sales_team | N/A | N/A | N/A | No rows available |
-| segment_covered | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| rep_id | No rows available |
-| sales_role | No rows available |
-| sales_team | No rows available |
-| segment_covered | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | sales_rep_key and rep_id are structurally mandatory, but no loaded data exists |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | rep_name, sales_role, sales_team, segment_covered |
+| Structurally Required Columns | sales_rep_key, rep_id |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | sales_rep_key is defined as primary key in metadata |
-| Required business identifier defined | PASS | rep_id is NOT NULL in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Sales coverage assessment | WARNING | No values available for role/team/segment profiling |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | sales_rep_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Column Metadata Availability | PASS | All 6 columns profiled |
+| Distribution Analysis | WARNING | No distributions available because table is empty |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_sales_rep` was profiled successfully at the structural level. Because it currently contains no records, no statistical conclusions can be drawn about sales teams, roles, identifiers, or completeness. It is schema-ready but empty.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_sales_rep` table contains the expected sales representative dimension structure and a valid surrogate key. Because it currently has no records, profiling results indicate structural readiness rather than populated data quality characteristics.
