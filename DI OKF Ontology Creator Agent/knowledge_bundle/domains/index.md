@@ -1,10 +1,10 @@
 ---
 title: Domains Index
-bundle: Cisco Bookings OKF Knowledge Bundle
+concept_type: navigation
 status: generated
 ---
 
-# Domains
+# Domains Index
 
 - [Sales Transactions](sales-transactions.md)
 - [Customer Management](customer-management.md)
