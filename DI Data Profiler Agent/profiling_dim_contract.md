@@ -5,113 +5,98 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_contract |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 5 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | contract_key |
+| Duplicate Primary Key Count | 0 |
+| Profiling Timestamp Context | Generated from live PostgreSQL metadata and table profiling queries |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | contract_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | contract_type | character varying | YES | 0 | N/A* | 0 | 0 |
-| 3 | term_months | integer | YES | 0 | N/A* | 0 | 0 |
-| 4 | auto_renew_flag | character | YES | 0 | N/A* | 0 | 0 |
-| 5 | coverage_level | character varying | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| contract_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| contract_type | character varying | max length 40 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| term_months | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| auto_renew_flag | character | max length 1 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| coverage_level | character varying | max length 20 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| contract_key | No values available; table is empty |
+| contract_type | No values available; table is empty |
+| term_months | No values available; table is empty |
+| auto_renew_flag | No values available; table is empty |
+| coverage_level | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| contract_key | N/A | N/A | N/A |
+| term_months | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 2 | contract_key, term_months |
-| character varying | 2 | contract_type, coverage_level |
-| character | 1 | auto_renew_flag |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| contract_type | min_len=null, max_len=null, avg_len=null |
+| auto_renew_flag | min_len=null, max_len=null, avg_len=null |
+| coverage_level | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| contract_key | 0 | No values present |
-| contract_type | 0 | No values present |
-| term_months | 0 | No values present |
-| auto_renew_flag | 0 | No values present |
-| coverage_level | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 5 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| contract_key | 0 | No rows present; duplicate assessment not meaningful |
-| contract_type | 0 | No rows present |
-| term_months | 0 | No rows present |
-| auto_renew_flag | 0 | No rows present |
-| coverage_level | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| contract_key | N/A | N/A | N/A | No rows available |
-| term_months | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No date columns exist in this table.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| contract_type | N/A | N/A | N/A | No rows available |
-| auto_renew_flag | N/A | N/A | N/A | No rows available |
-| coverage_level | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| contract_type | No rows available |
-| auto_renew_flag | No rows available |
-| coverage_level | No rows available |
-| term_months | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | Structural mandatory columns exist, but no loaded data to validate |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | contract_type, term_months, auto_renew_flag, coverage_level |
+| Structurally Required Columns | contract_key |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | contract_key is defined as primary key in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
-| Domain/value assessment | WARNING | No values available for profiling |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | contract_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Column Metadata Availability | PASS | All 5 columns profiled |
+| Distribution Analysis | WARNING | No distributions available because table is empty |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_contract` exists and its structure was successfully profiled in PostgreSQL. However, the table currently contains no records. As a result, distribution analysis, numeric statistics, text length statistics, duplicate detection, and completeness analysis are structurally prepared but not materially observable. This table appears ready for contract dimension data but is currently unpopulated.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_contract` table is structurally well-defined with 5 columns and a primary key on `contract_key`, but it currently contains no data. As a result, distribution, completeness, and statistical profiling are limited to schema-level observations only. This table is ready for downstream analytical use once records are loaded.
