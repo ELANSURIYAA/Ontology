@@ -5,172 +5,138 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | fact_bookings |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
-| Table Role | Central fact table at order-line booking grain |
+| Table Type | Fact |
+| Grain | One row per booking transaction / order line |
 | Row Count | 0 |
 | Column Count | 18 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | booking_id |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | booking_id | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | order_number | character varying | YES | 0 | N/A* | 0 | 0 |
-| 3 | order_line_number | integer | YES | 0 | N/A* | 0 | 0 |
-| 4 | date_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 5 | customer_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 6 | product_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 7 | partner_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 8 | geography_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 9 | sales_rep_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 10 | contract_key | integer | YES | 0 | N/A* | 0 | 0 |
-| 11 | booking_type | character varying | YES | 0 | N/A* | 0 | 0 |
-| 12 | is_renewal | integer | YES | 0 | N/A* | 0 | 0 |
-| 13 | quantity | integer | YES | 0 | N/A* | 0 | 0 |
-| 14 | unit_list_price_usd | numeric | YES | 0 | N/A* | 0 | 0 |
-| 15 | discount_pct | numeric | YES | 0 | N/A* | 0 | 0 |
-| 16 | booking_amount_usd | numeric | YES | 0 | N/A* | 0 | 0 |
-| 17 | acv_usd | numeric | YES | 0 | N/A* | 0 | 0 |
-| 18 | tcv_usd | numeric | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| booking_id | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| order_number | character varying | max length 20 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| order_line_number | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| date_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| customer_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| product_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| partner_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| geography_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| sales_rep_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| contract_key | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| booking_type | character varying | max length 15 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| is_renewal | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| quantity | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| unit_list_price_usd | numeric | precision 12, scale 2 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| discount_pct | numeric | precision 5, scale 2 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| booking_amount_usd | numeric | precision 14, scale 2 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| acv_usd | numeric | precision 14, scale 2 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| tcv_usd | numeric | precision 14, scale 2 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| booking_id | No values available; table is empty |
+| order_number | No values available; table is empty |
+| order_line_number | No values available; table is empty |
+| date_key | No values available; table is empty |
+| customer_key | No values available; table is empty |
+| product_key | No values available; table is empty |
+| partner_key | No values available; table is empty |
+| geography_key | No values available; table is empty |
+| sales_rep_key | No values available; table is empty |
+| contract_key | No values available; table is empty |
+| booking_type | No values available; table is empty |
+| is_renewal | No values available; table is empty |
+| quantity | No values available; table is empty |
+| unit_list_price_usd | No values available; table is empty |
+| discount_pct | No values available; table is empty |
+| booking_amount_usd | No values available; table is empty |
+| acv_usd | No values available; table is empty |
+| tcv_usd | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| booking_id | N/A | N/A | N/A |
+| order_line_number | N/A | N/A | N/A |
+| date_key | N/A | N/A | N/A |
+| customer_key | N/A | N/A | N/A |
+| product_key | N/A | N/A | N/A |
+| partner_key | N/A | N/A | N/A |
+| geography_key | N/A | N/A | N/A |
+| sales_rep_key | N/A | N/A | N/A |
+| contract_key | N/A | N/A | N/A |
+| is_renewal | N/A | N/A | N/A |
+| quantity | N/A | N/A | N/A |
+| unit_list_price_usd | N/A | N/A | N/A |
+| discount_pct | N/A | N/A | N/A |
+| booking_amount_usd | N/A | N/A | N/A |
+| acv_usd | N/A | N/A | N/A |
+| tcv_usd | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 10 | booking_id, order_line_number, date_key, customer_key, product_key, partner_key, geography_key, sales_rep_key, contract_key, is_renewal |
-| character varying | 2 | order_number, booking_type |
-| numeric | 5 | unit_list_price_usd, discount_pct, booking_amount_usd, acv_usd, tcv_usd |
-| integer | 1 | quantity |
+| None | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| order_number | min_len=null, max_len=null, avg_len=null |
+| booking_type | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| booking_id | 0 | No values present |
-| order_number | 0 | No values present |
-| order_line_number | 0 | No values present |
-| date_key | 0 | No values present |
-| customer_key | 0 | No values present |
-| product_key | 0 | No values present |
-| partner_key | 0 | No values present |
-| geography_key | 0 | No values present |
-| sales_rep_key | 0 | No values present |
-| contract_key | 0 | No values present |
-| booking_type | 0 | No values present |
-| is_renewal | 0 | No values present |
-| quantity | 0 | No values present |
-| unit_list_price_usd | 0 | No values present |
-| discount_pct | 0 | No values present |
-| booking_amount_usd | 0 | No values present |
-| acv_usd | 0 | No values present |
-| tcv_usd | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 18 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| booking_id | 0 | No rows present; duplicate assessment not meaningful |
-| order_number | 0 | No rows present |
-| order_line_number | 0 | No rows present |
-| date_key | 0 | No rows present |
-| customer_key | 0 | No rows present |
-| product_key | 0 | No rows present |
-| partner_key | 0 | No rows present |
-| geography_key | 0 | No rows present |
-| sales_rep_key | 0 | No rows present |
-| contract_key | 0 | No rows present |
-| booking_type | 0 | No rows present |
-| is_renewal | 0 | No rows present |
-| quantity | 0 | No rows present |
-| unit_list_price_usd | 0 | No rows present |
-| discount_pct | 0 | No rows present |
-| booking_amount_usd | 0 | No rows present |
-| acv_usd | 0 | No rows present |
-| tcv_usd | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| booking_id | N/A | N/A | N/A | No rows available |
-| order_line_number | N/A | N/A | N/A | No rows available |
-| date_key | N/A | N/A | N/A | No rows available |
-| customer_key | N/A | N/A | N/A | No rows available |
-| product_key | N/A | N/A | N/A | No rows available |
-| partner_key | N/A | N/A | N/A | No rows available |
-| geography_key | N/A | N/A | N/A | No rows available |
-| sales_rep_key | N/A | N/A | N/A | No rows available |
-| contract_key | N/A | N/A | N/A | No rows available |
-| is_renewal | N/A | N/A | N/A | No rows available |
-| quantity | N/A | N/A | N/A | No rows available |
-| unit_list_price_usd | N/A | N/A | N/A | No rows available |
-| discount_pct | N/A | N/A | N/A | No rows available |
-| booking_amount_usd | N/A | N/A | N/A | No rows available |
-| acv_usd | N/A | N/A | N/A | No rows available |
-| tcv_usd | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-No physical date columns exist in this table. Temporal analysis depends on the foreign key `date_key` to `ontology.dim_date`.
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| order_number | N/A | N/A | N/A | No rows available |
-| booking_type | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| booking_type | No rows available |
-| is_renewal | No rows available |
-| order_number | No rows available |
-| customer_key | No rows available |
-| product_key | No rows available |
-| partner_key | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | booking_id is structurally mandatory, but no loaded data exists |
-| Referential completeness | Cannot evaluate foreign key population without rows |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | order_number, order_line_number, date_key, customer_key, product_key, partner_key, geography_key, sales_rep_key, contract_key, booking_type, is_renewal, quantity, unit_list_price_usd, discount_pct, booking_amount_usd, acv_usd, tcv_usd |
+| Structurally Required Columns | booking_id |
 
 ## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | booking_id is defined as primary key in metadata |
-| Foreign keys defined | PASS | 7 foreign key relationships exist to dimension tables |
-| Fact grain documented | PASS | Order-line booking grain documented in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Measure quality assessment | WARNING | Cannot evaluate booking, ACV, TCV, discount, or quantity distributions without data |
-| Referential quality assessment | WARNING | Cannot validate populated foreign keys without rows |
-| Booking type domain assessment | WARNING | No values available for New/Renewal/Upsell distribution |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | booking_id |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Foreign Key Structure Present | PASS | Keys to date, customer, product, partner, geography, sales rep, and contract dimensions |
+| Data Presence | WARNING | Table contains 0 rows |
+| Measure Profiling | WARNING | No numeric fact values available for statistical analysis |
+| Column Metadata Availability | PASS | All 18 columns profiled |
 
 ## Overall Profiling Summary
 
-The table `ontology.fact_bookings` is the central fact table in the Cisco bookings star schema and was successfully profiled structurally in PostgreSQL. However, it currently contains no booking records. Because of the zero-row state, there are no observable transaction distributions, financial measure statistics, renewal patterns, or referential completeness metrics. The table design is analytically appropriate, but the dataset is not yet loaded.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.fact_bookings` table is structurally modeled as a fact table at booking transaction grain with 18 columns, a primary key on `booking_id`, and the expected foreign key links to all dimensions. However, the table currently contains no data, so no booking distributions, financial measure statistics, or completeness patterns can be inferred from records at this time.
