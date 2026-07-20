@@ -1,43 +1,56 @@
 ---
 title: OKF Knowledge Bundle Index
-bundle: Cisco Bookings OKF Knowledge Bundle
-version: 1.0
-source_model: OSI Semantic Model.md
-source_process_document: Cisco_Bookings_Data_Model_and_Process.docx
+concept_type: navigation
+bundle_name: Cisco Bookings OKF Knowledge Bundle
+source_documents:
+  - OSI Semantic Model.md
+  - Cisco_Bookings_Data_Model_and_Process.docx
 status: generated
 ---
 
 # Cisco Bookings OKF Knowledge Bundle
 
-This Open Knowledge Format (OKF) knowledge bundle represents the validated Cisco bookings semantic model and associated business process context.
+This Open Knowledge Format (OKF) knowledge bundle organizes the validated Cisco Bookings semantic model into business domains, entities, relationships, measures, and glossary concepts.
 
-## Bundle Contents
+## Navigation
 
 - [Semantic Summary](semantic_summary.md)
-- [Metrics](metrics.md)
+- [Metrics and Validation](metrics.md)
 - [Domains](domains/index.md)
 - [Entities](entities/index.md)
 - [Relationships](relationships/index.md)
 - [Measures](measures/index.md)
 - [Glossary](glossary/index.md)
 
-## Source Inputs
+## Source Context
 
-- OSI Semantic Model: `OSI Semantic Model.md`
-- Business Process Document: `Cisco_Bookings_Data_Model_and_Process.docx`
+The bundle is derived from:
+- `OSI Semantic Model.md`
+- `Cisco_Bookings_Data_Model_and_Process.docx`
 
-## Validation Summary
+## Coverage Summary
 
-- Duplicate entities: PASS
-- Duplicate measures: PASS
-- Circular relationships: PASS
-- Missing glossary mappings: WARNING
-- Missing keys: PASS
-- Orphan entities: PASS
-- Data-backed validation: WARNING
+- 8 business domains
+- 8 business entities
+- 7 semantic relationships
+- 6 business measures
+- 24 glossary terms
 
-## Notes
+## Validation Notes
 
-This bundle preserves the semantic meaning of the source model.
-Warnings from source validation are carried forward into the summary and metrics documents.
-Semantic cross-links are included throughout the bundle for downstream ontology generation and knowledge navigation.
+- No duplicate entities identified.
+- No duplicate measures identified.
+- No circular relationships identified.
+- Some semantic definitions were inferred because native database comments were unavailable.
+- Source tables are empty, so instance-level validation was not possible.
+
+## Quick Links by Domain
+
+- [Sales Transactions](domains/sales-transactions.md)
+- [Customer Management](domains/customer-management.md)
+- [Product Management](domains/product-management.md)
+- [Partner Management](domains/partner-management.md)
+- [Geography](domains/geography.md)
+- [Sales Organization](domains/sales-organization.md)
+- [Contract Management](domains/contract-management.md)
+- [Time](domains/time.md)
