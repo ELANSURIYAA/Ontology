@@ -1,12 +1,12 @@
 ---
-title: Metrics Overview
-bundle: Cisco Bookings OKF Knowledge Bundle
+title: Metrics and Validation
+concept_type: navigation
 status: generated
 ---
 
-# Metrics Overview
+# Metrics and Validation
 
-## Core Business Measures
+## Business Measures
 
 | Measure | Definition | Aggregation | Related Entity |
 | --- | --- | --- | --- |
@@ -19,16 +19,28 @@ status: generated
 
 ## KPI Context from Business Process
 
-- **Total Bookings**: headline demand metric based on the sum of booking amount.
-- **Net-New vs Renewal mix**: analyzed using booking type and renewal indicator.
-- **ACV / TCV**: key subscription-oriented contract value metrics.
-- **Renewal capture rate**: business KPI referenced in process context but not directly modeled as a base measure.
-- **Attach rate**: business KPI referenced in process context but not directly modeled as a base measure.
-- **Product-family mix**: enabled by linking measures to [Product Dimension](entities/product-dimension.md).
-- **Partner contribution**: enabled by linking measures to [Partner Dimension](entities/partner-dimension.md).
+- Total Bookings: headline demand metric based on booked value in a period.
+- Net-New vs Renewal mix: based on booking type and renewal indicator.
+- ACV / TCV: annual and full contract value for subscriptions.
+- Renewal capture rate: share of expiring contracts renewed on time.
+- Attach rate: share of hardware deals that attach a service or subscription.
+- Product-family mix: distribution of bookings by family.
+- Partner contribution: bookings by route-to-market and partner.
 
-## Validation Notes
+## Validation Warnings
 
-- Non-additive metric caution applies to [Discount Percentage](measures/discount-percentage.md).
-- Governance caution applies to [Unit List Price USD](measures/unit-list-price-usd.md).
-- ACV applicability may vary by offer type; hardware is noted as typically not ACV-applicable in the business process context.
+| Warning Type | Severity | Details |
+| --- | --- | --- |
+| Inferred semantic definitions | Medium | Several business definitions rely on glossary inference because native database comments are not present. |
+| Empty source tables | High | Instance-level validation for code values, data quality, and measure distributions cannot be performed. |
+| Natural key gaps | Medium | `dim_contract` and `dim_geography` do not expose explicit natural business identifiers in supplied metadata. |
+| Non-additive metric caution | Medium | `discount_pct` and `unit_list_price_usd` should not be blindly summed in downstream analytics. |
+| Coded indicator ambiguity | Medium | `is_renewal` and `auto_renew_flag` require business-approved code-set documentation. |
+
+## Bundle Validation Check
+
+- Missing concept documents: none in generated set.
+- Missing YAML frontmatter: none in generated set.
+- Broken semantic links: none expected within generated bundle structure.
+- Duplicate concept documents: none detected.
+- Missing references: some source semantics remain inferred where explicit business documentation was not available.
