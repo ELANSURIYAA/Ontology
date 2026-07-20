@@ -1,0 +1,16 @@
+---
+title: Domains Index
+bundle: Cisco Bookings OKF Knowledge Bundle
+status: generated
+---
+
+# Domains
+
+- [Sales Transactions](sales-transactions.md)
+- [Customer Management](customer-management.md)
+- [Product Management](product-management.md)
+- [Partner Management](partner-management.md)
+- [Geography](geography.md)
+- [Sales Organization](sales-organization.md)
+- [Contract Management](contract-management.md)
+- [Time](time.md)
