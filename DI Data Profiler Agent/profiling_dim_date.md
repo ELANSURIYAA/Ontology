@@ -5,124 +5,102 @@
 | Attribute | Value |
 | --- | --- |
 | Database Name | ontology |
-| Schema Name | ontology |
+| Schema | ontology |
 | Table Name | dim_date |
 | Business Domain | Cisco Sales Bookings and Revenue Analytics |
+| Table Type | Dimension |
 | Row Count | 0 |
 | Column Count | 7 |
-| Database Version | PostgreSQL 16.14 |
-| Profiling Status | Profiled successfully |
-| Data Population Status | Empty table |
+| Primary Key | date_key |
+| Duplicate Primary Key Count | 0 |
 
 ## Column Profile Summary
 
-| Ordinal Position | Column Name | Data Type | Nullable | Null Count | Null % | Distinct Count | Duplicate Count |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | date_key | integer | NO | 0 | N/A* | 0 | 0 |
-| 2 | full_date | date | NO | 0 | N/A* | 0 | 0 |
-| 3 | month_name | character varying | YES | 0 | N/A* | 0 | 0 |
-| 4 | calendar_year | integer | YES | 0 | N/A* | 0 | 0 |
-| 5 | fiscal_year | character varying | YES | 0 | N/A* | 0 | 0 |
-| 6 | fiscal_quarter | character varying | YES | 0 | N/A* | 0 | 0 |
-| 7 | fiscal_period_seq | integer | YES | 0 | N/A* | 0 | 0 |
+| Column Name | Data Type | Length / Precision | Nullable | Primary Key | Distinct Count | Null Count | Null % | Duplicate Value Count | Min Value | Max Value | Avg Value | String Length Statistics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| date_key | integer | precision 32, scale 0 | NO | YES | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| full_date | date | date | NO | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| month_name | character varying | max length 12 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| calendar_year | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
+| fiscal_year | character varying | max length 6 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| fiscal_quarter | character varying | max length 10 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | min_len=null, max_len=null, avg_len=null |
+| fiscal_period_seq | integer | precision 32, scale 0 | YES | NO | 0 | 0 | N/A (empty table) | 0 | N/A | N/A | N/A | N/A |
 
-\* Null percentage is not computable because row count is 0.
+## Data Distribution Summary
 
-## Column Data Types Summary
+| Column Name | Distribution / Top Values |
+| --- | --- |
+| date_key | No values available; table is empty |
+| full_date | No values available; table is empty |
+| month_name | No values available; table is empty |
+| calendar_year | No values available; table is empty |
+| fiscal_year | No values available; table is empty |
+| fiscal_quarter | No values available; table is empty |
+| fiscal_period_seq | No values available; table is empty |
 
-| Data Type | Column Count | Columns |
+## Numeric Statistics
+
+| Column Name | Min | Max | Average |
+| --- | --- | --- | --- |
+| date_key | N/A | N/A | N/A |
+| calendar_year | N/A | N/A | N/A |
+| fiscal_period_seq | N/A | N/A | N/A |
+
+## Date Statistics
+
+| Column Name | Min Date | Max Date |
 | --- | --- | --- |
-| integer | 3 | date_key, calendar_year, fiscal_period_seq |
-| date | 1 | full_date |
-| character varying | 3 | month_name, fiscal_year, fiscal_quarter |
+| full_date | N/A | N/A |
+
+## Text Statistics
+
+| Column Name | Length Statistics |
+| --- | --- |
+| month_name | min_len=null, max_len=null, avg_len=null |
+| fiscal_year | min_len=null, max_len=null, avg_len=null |
+| fiscal_quarter | min_len=null, max_len=null, avg_len=null |
 
 ## NULL Statistics
 
 | Metric | Value |
 | --- | --- |
-| Total Rows | 0 |
-| Columns with Nulls Observed | 0 |
-| Columns Fully Populated | 0 observable due to no records |
-| Missing Data Assessment | No data available to assess completeness |
+| Columns With Observed NULLs | 0 |
+| Note | Table is empty, so NULL percentages are not computable from data |
 
 ## Distinct Value Statistics
 
-| Column Name | Distinct Count | Observation |
-| --- | --- | --- |
-| date_key | 0 | No values present |
-| full_date | 0 | No values present |
-| month_name | 0 | No values present |
-| calendar_year | 0 | No values present |
-| fiscal_year | 0 | No values present |
-| fiscal_quarter | 0 | No values present |
-| fiscal_period_seq | 0 | No values present |
+| Metric | Value |
+| --- | --- |
+| Total Columns Profiled | 7 |
+| Columns With Non-Zero Distinct Values | 0 |
+| Note | Distinct counts are 0 because the table contains no rows |
 
 ## Duplicate Statistics
 
-| Column Name | Duplicate Count | Assessment |
-| --- | --- | --- |
-| date_key | 0 | No rows present; duplicate assessment not meaningful |
-| full_date | 0 | No rows present |
-| month_name | 0 | No rows present |
-| calendar_year | 0 | No rows present |
-| fiscal_year | 0 | No rows present |
-| fiscal_quarter | 0 | No rows present |
-| fiscal_period_seq | 0 | No rows present |
-
-## Numeric Statistics
-
-| Column Name | Min | Max | Avg | Assessment |
-| --- | --- | --- | --- | --- |
-| date_key | N/A | N/A | N/A | No rows available |
-| calendar_year | N/A | N/A | N/A | No rows available |
-| fiscal_period_seq | N/A | N/A | N/A | No rows available |
-
-## Date Statistics
-
-| Column Name | Min Date | Max Date | Range Assessment |
-| --- | --- | --- | --- |
-| full_date | N/A | N/A | No rows available |
-
-## Text Statistics
-
-| Column Name | Min Length | Max Length | Avg Length | Value Distribution |
-| --- | --- | --- | --- | --- |
-| month_name | N/A | N/A | N/A | No rows available |
-| fiscal_year | N/A | N/A | N/A | No rows available |
-| fiscal_quarter | N/A | N/A | N/A | No rows available |
-
-## Value Distribution Summary
-
-| Column Name | Top Values |
+| Metric | Value |
 | --- | --- |
-| month_name | No rows available |
-| calendar_year | No rows available |
-| fiscal_year | No rows available |
-| fiscal_quarter | No rows available |
-| fiscal_period_seq | No rows available |
+| Duplicate Primary Keys | 0 |
+| Duplicate Value Observation | No duplicate values observed because the table is empty |
 
 ## Missing Data Statistics
 
-| Category | Result |
+| Metric | Value |
 | --- | --- |
-| Row-level missingness | Not assessable because table is empty |
-| Column-level missingness | Not observable because table is empty |
-| Mandatory column risk | date_key and full_date are structurally mandatory, but no loaded data exists |
+| Missing Data Assessment | Not measurable from records because row count = 0 |
+| Structural Nullable Columns | month_name, calendar_year, fiscal_year, fiscal_quarter, fiscal_period_seq |
+| Structurally Required Columns | date_key, full_date |
 
-## Basic Data Quality Indicators
+## Data Quality Summary
 
-| Indicator | Status | Details |
+| Quality Check | Status | Details |
 | --- | --- | --- |
-| Primary key defined | PASS | date_key is defined as primary key in metadata |
-| Required date attribute defined | PASS | full_date is NOT NULL in metadata |
-| Data presence | FAIL | Table contains 0 rows |
-| Completeness assessment | WARNING | Cannot evaluate completeness without data |
-| Uniqueness assessment | WARNING | Cannot validate uniqueness behavior without data |
-| Temporal coverage assessment | WARNING | Cannot evaluate date range because no rows exist |
+| Table Exists | PASS | Verified in schema ontology |
+| Primary Key Defined | PASS | date_key |
+| Duplicate Primary Keys | PASS | 0 duplicates found |
+| Data Presence | WARNING | Table contains 0 rows |
+| Date Profiling Capability | WARNING | No date values available for min/max analysis |
+| Column Metadata Availability | PASS | All 7 columns profiled |
 
 ## Overall Profiling Summary
 
-The table `ontology.dim_date` was profiled successfully from PostgreSQL metadata and table counts. It is currently empty, which prevents evaluation of date range coverage, fiscal period consistency, duplicate date keys, and text distributions for month and fiscal attributes. Structurally, it is a standard date dimension prepared for analytics but not populated at this time.
-
----
-Generated by DI Data Profiler Agent
+The `ontology.dim_date` table is structurally complete and contains standard date-dimension attributes, but it currently has no rows. Because the table is empty, date range analysis, distribution checks, and completeness assessment are limited to metadata-only validation.
